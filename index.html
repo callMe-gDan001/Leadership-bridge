@@ -10,15 +10,55 @@
   <!-- Custom CSS  -->
   <link rel="stylesheet" href="./style.css">
   
-  <link rel="stylesheet" href="./assets/Style/CSS/style.css">
+  <!-- <link rel="stylesheet" href="./assets/Style/CSS/style.css"> -->
+<style>
+  .logo{
+    width: 70px;
+    height: 50px;}
+    @keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Trigger animation when scrolled into view */
+[data-animate="true"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+[data-animate="true"].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+  .feature{
+    height: 500px;
+    }
+
+    @media screen and (max-width:700px) {
+      .feature{
+        height: 300px;
+      }
+    }
+     @media screen and (max-width:468px) {
+      .feature{
+        height: 240px;
+      }
+    }
+</style>
 </head>
+
 <body>
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
         <!-- <img src="" alt="LBN" height="36" style="margin-right:8px;"> -->
-        <span class="fw-bold">Leadership Bridge</span>
+        <img class="logo" src="./assets/images/leadership bridge.avif" alt="">
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
@@ -45,14 +85,15 @@
   </nav>
 
   <!-- HERO -->
-  <header class="bg-light py-5">
+  <header style="height: 100vh;" class="bg-success py-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-7">
-          <h1 class="display-5 fw-bold">Building Better Leaders Across Nigeria</h1>
-          <p class="lead text-muted">Training • Community • Governance. Join our network of committed leaders.</p>
-          <a href="./join.html" class="btn btn-primary btn-lg me-2">Become a Member</a>
-          <a href="donate.html" class="btn btn-outline-primary btn-lg">Support Our Cause</a>
+          <h1 class="display-5 fw-bold">Welcome to the  Community Structure Foundation for Good Governance</h1>
+          <p class="lead text-white">• Promoting Good Governance for a Better Nigeria.</p>
+         <p class="lead text-white">• Join us in fostering transparency and accountability through.</p>
+          <p class="lead text-white">• workshops and seminars on good governance.</p>
+          <a href="./join.html" class="btn text-white btn-outline-dark btn-lg me-2 align-items-center            ">Register</a>
         </div>
         <div class="col-md-5 text-center">
           <!-- <img src="" alt="Leadership illustration" class="img-fluid"> -->
@@ -62,39 +103,40 @@
   </header>
 
   <!-- FEATURES -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row g-4 text-center">
-        <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm p-3">
-            <div class="card-body">
-              <h5 class="card-title">Leadership Training</h5>
-              <p class="card-text">Practical courses, workshops and downloadable resources.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm p-3">
-            <div class="card-body">
-              <h5 class="card-title">Community Network</h5>
-              <p class="card-text">Connect with leaders across states and sectors.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm p-3">
-            <div class="card-body">
-              <h5 class="card-title">Campaigns & Advocacy</h5>
-              <p class="card-text">Participate in campaigns for good governance and civic engagement.</p>
-            </div>
+<section style="height: 100vh;" class="py-5"> 
+  <div class="container-fluid h-100">
+    <div class="row h-100 align-items-center">
+      
+      <!-- Text Section (Left Side) -->
+      <div class="col-md-6 d-flex justify-content-center align-items-center" style="animation: slideInLeft 1s ease-out;">
+        <div class="card border-0 shadow-sm p-4" style="max-width: 500px;">
+          <div class="card-body">
+            <h5 class="card-title fw-bold mb-3">Promoting Good Governance Together</h5>
+            <p class="card-text">
+              At the Community Structure Foundation for Good Governance, we strive to enhance awareness and foster
+              transparency through workshops, seminars, and conferences in collaboration with various institutions.
+            </p>
           </div>
         </div>
       </div>
+
+      <!-- Image Section (Right Side) -->
+      <div class="col-md-6 p-0 feature rounded-5" style="overflow: hidden;">
+        <img src="./assets/images/leadership.avif" 
+             alt="Leadership" 
+             class="w-100 h-100 object-fit-cover" 
+             style="animation: slideInRight 1s ease-out;">
+      </div>
+      
     </div>
-  </section>
+  </div>
+</section>
+
+
+
 
   <!-- IMPACT STATS -->
-  <section class="bg-primary text-white py-5">
+  <section class="bg-success text-white py-5">
     <div class="container text-center">
       <div class="row g-4">
         <div class="col-6 col-md-3">
