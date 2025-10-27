@@ -7,6 +7,7 @@ body {
   line-height: 1.5;
   background: white;
   color: #222;
+  font-family: "Poppins", sans-serif;
 }
 .navbar-brand img { border-radius: 4px; }
 header { background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%); }
