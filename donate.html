@@ -1,89 +1,199 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Donate | Leadership Bridge Nigeria</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate | CSF Nigeria</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/Style/style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      scroll-behavior: smooth;
+    }
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+    /* Navbar */
+    .navbar {
+      background: #fff !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .navbar-brand img {
+      height: 45px;
+    }
+    .nav-link {
+      color: #333 !important;
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: #28a745 !important;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('https://www.csfnigeria.org/wp-content/uploads/2022/10/slider-1.jpg') center/cover no-repeat;
+      color: #fff;
+      padding: 140px 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-weight: 700;
+    }
+
+    /* Donation Form */
+    .donation-card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+      background: #fff;
+    }
+    .btn-donate {
+      background-color: #28a745;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .btn-donate:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      background: #212529;
+      color: #ccc;
+      padding: 30px 0;
+    }
+  </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">Leadership Bridge</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="join.html">Join Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-        <li class="nav-item"><a class="nav-link active" href="donate.html">Donate</a></li>
-      </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+     <a class="navbar-brand d-flex align-items-center" href="#">
+        <!-- <img src="" alt="LBN" height="36" style="margin-right:8px;"> -->
+        <img class="logo" src="./assets/images/leadership bridge.avif" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="bog.html">Board of Governance</a></li>
+          <li class="nav-item"><a class="nav-link" href="./join.html">Member Registeration</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="./events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link active text-black" href="./donate.html">Donations</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- DONATION SECTION -->
-<section class="py-5">
-  <div class="container">
-    <h1 class="text-center mb-4">Support Our Cause</h1>
-    <p class="text-center text-muted mb-5">
-      Your donation helps us train leaders, strengthen communities, and drive civic advocacy.
-    </p>
+  <!-- Hero -->
+  <section class="hero bg-success">
+    <div class="container">
+      <h1 class="display-5 mb-3">Support CSF Nigeria</h1>
+      <p class="lead mb-4">Join us in promoting good governance through awareness and collaboration.</p>
+      <a href="#donate" class="btn btn-success px-4 py-2">Donate Now</a>
+    </div>
+  </section>
 
-    <form id="donationForm" class="mx-auto border p-4 rounded shadow-sm" style="max-width: 500px;">
-      <!-- Amount -->
-      <div class="mb-3">
-        <label for="amount" class="form-label">Donation Amount (₦)</label>
-        <input type="number" class="form-control" id="amount" placeholder="Enter amount" required>
+  <!-- Donation Section -->
+  <section class="py-5" id="donate">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="card donation-card p-4">
+            <h3 class="text-center mb-4 fw-semibold">Make a Donation</h3>
+
+            <form id="donationForm">
+              <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Enter your name" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Donation Amount (₦)</label>
+                <input type="number" class="form-control" id="amount" placeholder="1000" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Message (Optional)</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Leave a short note"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-donate w-100">Proceed to Donate</button>
+            </form>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Quick select buttons -->
-      <div class="mb-3 text-center">
-        <button type="button" class="btn btn-outline-primary me-2 quick-amount" data-value="5000">₦5,000</button>
-        <button type="button" class="btn btn-outline-primary me-2 quick-amount" data-value="10000">₦10,000</button>
-        <button type="button" class="btn btn-outline-primary quick-amount" data-value="20000">₦20,000</button>
-      </div>
+  <!-- Footer -->
+  <footer class="text-center">
+    <p class="mb-0">&copy; 2025 CSF Nigeria. All Rights Reserved.</p>
+  </footer>
 
-      <!-- Donation type -->
-      <div class="mb-3">
-        <label class="form-label">Donation Type</label>
-        <select class="form-select" id="donationType" required>
-          <option value="one-time">One-Time</option>
-          <option value="recurring">Monthly</option>
-        </select>
-      </div>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://checkout.flutterwave.com/v3.js"></script>
+  <script>
+    document.getElementById("donationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
 
-      <!-- Donor details -->
-      <div class="mb-3">
-        <label for="donorName" class="form-label">Full Name</label>
-        <input type="text" class="form-control" id="donorName" required>
-      </div>
+      const fullName = document.getElementById("fullName").value;
+      const email = document.getElementById("email").value;
+      const amount = parseFloat(document.getElementById("amount").value);
+      const message = document.getElementById("message").value;
 
-      <div class="mb-3">
-        <label for="donorEmail" class="form-label">Email Address</label>
-        <input type="email" class="form-control" id="donorEmail" required>
-      </div>
+      if (amount <= 0) {
+        alert("Please enter a valid donation amount.");
+        return;
+      }
 
-      <!-- Submit -->
-      <button type="submit" class="btn btn-primary w-100">Donate Now</button>
-    </form>
-  </div>
-</section>
+      FlutterwaveCheckout({
+        public_key: "FLWPUBK_TEST-xxxxxxxxxxxxxxxxxxxxx-X", // Replace with your test key
+        tx_ref: "CSF-" + Date.now(),
+        amount: amount,
+        currency: "NGN",
+        payment_options: "card, banktransfer, ussd",
+        customer: {
+          email: email,
+          name: fullName,
+        },
+        customizations: {
+          title: "CSF Nigeria Donation",
+          description: message || "Donation to CSF Nigeria",
+          logo: "https://www.csfnigeria.org/wp-content/uploads/2022/11/CSF-LOGO.png",
+        },
+        callback: function (data) {
+          // ✅ Display success message
+          alert(`Thank you ${fullName}! Your donation was successful.\nReference: ${data.tx_ref}`);
 
-<!-- FOOTER -->
-<footer class="py-4 bg-light text-center">
-  <small class="text-muted">© Leadership Bridge Nigeria</small>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/donate.js"></script>
+          // 🧩 Send data to Daniel’s backend for verification
+          fetch("https://your-backend-url.com/api/verify-payment", { // Daniel’s endpoint goes here
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+          });
+        },
+        onclose: function() {
+          console.log("Payment closed");
+        },
+      });
+    });
+  </script>
 </body>
 </html>
