@@ -9,12 +9,23 @@ font-family: 'Poppins', sans-serif;
   color: #222;
   font-family: "Poppins", sans-serif;
 }
-.navbar-brand img { border-radius: 4px; }
-header { background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%); }
-.card-title { font-weight: 600; }
-.bg-primary { background-color: var(--brand) !important; }
-.btn-primary { background-color: var(--brand); border-color: var(--brand); }
-
+        .navbar-brand img { border-radius: 4px; }
+        header { background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%); }
+        .card-title { font-weight: 600; }
+        .bg-primary { background-color: var(--brand) !important; }
+        .btn-primary { background-color: var(--brand); border-color: var(--brand); }
+      .navbar {
+      background: #fff !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+    
+        .nav-link {
+        color: #333 !important;
+        font-weight: 500;
+        }
+        .nav-link:hover {
+        color: #28a745 !important;
+        }
 
         .logo{
             width: 57px;
