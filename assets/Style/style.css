@@ -126,3 +126,11 @@ font-family: 'Poppins', sans-serif;
                 background-color: red;
             }
         }
+
+       
+            @media screen and (max-width:500px) {
+             .inqsection{
+                flex-direction: column;
+             }
+            }
+       
