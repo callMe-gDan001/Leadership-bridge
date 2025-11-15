@@ -68,22 +68,26 @@
     }
 
     @media screen and (max-width: 500px) {
+      .overall{
+        width: 400px;
+        text-align: center;
+        flex-direction: column;
+      }
     .hr {
       flex-direction: column;
       text-align: center;
 
       }
       .declaration{
+       text-align: center;
         width: 287px;
-        text-align: left;
-      }
-}      
-    /* .para{
-      width: 287px;
+      }     
+    .para{
+      width: 350px;
       text-align: center;
       /* text-align: left; */
-    } */
-
+    }
+} 
   </style>
 </head>
 <body>
@@ -113,7 +117,7 @@
 
   <!-- Hero -->
   <section class="hero d-flex mx-auto hr">
-    <div class="container align-self-center" style="width: 700px; ">
+    <div class="container align-self-center overall" >
       <h1 class="declaration">Meet Our Dedicated Board Members</h1>
       <p class="para">Explore the profiles and contributions of our esteemed board members, highlighting their expertise and dedication to promoting good governance in Nigeria.</p>
     </div>
